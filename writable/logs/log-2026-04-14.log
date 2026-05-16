@@ -1,0 +1,30 @@
+CRITICAL - 2026-04-14 22:08:52 --> ErrorException: include(cabecalho.php): Failed to open stream: No such file or directory
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 1.
+ 1 APPPATH\Views\dashboard.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(cabecalho.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 1)
+ 2 APPPATH\Views\dashboard.php(1): include()
+ 3 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-14 22:09:51 --> ErrorException: include(cabecalho.php): Failed to open stream: No such file or directory
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 1.
+ 1 APPPATH\Views\dashboard.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(cabecalho.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 1)
+ 2 APPPATH\Views\dashboard.php(1): include()
+ 3 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 4 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 6 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

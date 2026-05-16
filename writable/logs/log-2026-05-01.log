@@ -1,0 +1,56 @@
+CRITICAL - 2026-05-01 00:33:52 --> ErrorException: Undefined variable $registro
+[Method: POST, Route: registrar]
+in APPPATH\Views\registrar.php on line 160.
+ 1 APPPATH\Views\registrar.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registro', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php', 160)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('registrar', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('registrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-01 00:43:54 --> ErrorException: Undefined variable $registro
+[Method: POST, Route: registrar]
+in APPPATH\Views\registrar.php on line 160.
+ 1 APPPATH\Views\registrar.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registro', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php', 160)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('registrar', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('registrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-01 00:44:01 --> ErrorException: Undefined variable $registro
+[Method: POST, Route: registrar]
+in APPPATH\Views\registrar.php on line 160.
+ 1 APPPATH\Views\registrar.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registro', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php', 160)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('registrar', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('registrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-01 00:47:43 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: registrar]
+in APPPATH\Views\registrar.php on line 160.
+ 1 APPPATH\Views\registrar.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php', 160)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('registrar', [], true)
+ 5 APPPATH\Controllers\Home.php(26): view('registrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

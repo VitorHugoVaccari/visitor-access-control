@@ -1,0 +1,112 @@
+.container {
+  width: 92%;
+  margin: 30px auto;
+}
+
+.topo h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.topo p {
+  color: #6c757d;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.filtros {
+  background: #f8f9fb;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.filtros-linha {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.filtros input,
+.filtros select {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.filtros-acoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acoes-esquerda {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-filtrar {
+  background-color: #1f4e79;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-limpar {
+  background-color: #e9ecef;
+  border: 1px solid #dcdcdc;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #dee2e6;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  color: #495057;
+}
+
+td {
+  padding: 18px 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+tbody tr {
+  border-top: 1px solid #e9ecef;
+}
+
+.status {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.status-ativo {
+  color: #059669;
+}
+
+.status-finalizado {
+  color: #6b7280;
+}

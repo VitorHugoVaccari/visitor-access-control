@@ -1,0 +1,864 @@
+CRITICAL - 2026-04-30 00:39:57 --> Error: Class "App\Models\RegistroModel" not found
+[Method: POST, Route: dashboard]
+in APPPATH\Controllers\Home.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-30 00:40:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.i' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:40:19 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.i' at line 10
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 2 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:40:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.i' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:40:19 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.i' at line 10
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.email,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN areas-registro ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-30 00:42:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+ ' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:42:38 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+ ' at line 2
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 2 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:42:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+ ' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:42:38 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+ ' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            .nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-30 00:43:52 --> Unknown column 'r.Visitante_id_visitante' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:43:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'r.Visitante_id_visitante' in 'on clause'
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 2 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:43:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'r.Visitante_id_visitante' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 00:43:52 --> [Caused by] mysqli_sql_exception: Unknown column 'r.Visitante_id_visitante' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 4 APPPATH\Models\RegistroModel.php(78): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.Visitante_id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(42): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-30 23:05:57 --> Unknown column 'r.hora_saida' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 4 APPPATH\Models\RegistroModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\RegistroModel->buscarHistorico()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->historico()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:05:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'r.hora_saida' in 'field list'
+[Method: POST, Route: historico]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistroModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 2 APPPATH\Controllers\Home.php(37): App\Models\RegistroModel->buscarHistorico()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->historico()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:05:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'r.hora_saida' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 3 APPPATH\Models\RegistroModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 4 APPPATH\Controllers\Home.php(37): App\Models\RegistroModel->buscarHistorico()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->historico()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:05:57 --> [Caused by] mysqli_sql_exception: Unknown column 'r.hora_saida' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 4 APPPATH\Models\RegistroModel.php(100): CodeIgniter\Database\BaseConnection->query('SELECT 
+                v.nome,
+                v.cpf,
+                a.nome AS area,
+                r.hora_entrada,
+                r.hora_saida,
+                TIMESTAMPDIFF(MINUTE, r.hora_entrada, r.hora_saida) AS duracao_minutos,
+                r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'finalizado\'
+            ORDER BY r.hora_entrada DESC')
+ 5 APPPATH\Controllers\Home.php(37): App\Models\RegistroModel->buscarHistorico()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->historico()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:21:50 --> ErrorException: Undefined array key "id_area"
+[Method: POST, Route: registrar]
+in APPPATH\Views\registrar.php on line 102.
+ 1 APPPATH\Views\registrar.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_area"', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php', 102)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\registrar.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('registrar', [], true)
+ 5 APPPATH\Controllers\Home.php(25): view('registrar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrar()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-30 23:30:19 --> Cannot add or update a child row: a foreign key constraint fails (`access_control_system`.`registro_de_acesso`, CONSTRAINT `registro_de_acesso_ibfk_2` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionario` (`id_funcionario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')')
+ 4 APPPATH\Models\RegistroModel.php(27): CodeIgniter\Database\BaseConnection->query('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (?, ?, ?, ?)', [...])
+ 5 APPPATH\Controllers\Home.php(48): App\Models\RegistroModel->criarRegistro(1, 'Pq eu quis')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:30:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`access_control_system`.`registro_de_acesso`, CONSTRAINT `registro_de_acesso_ibfk_2` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionario` (`id_funcionario`))
+[Method: POST, Route: home/registrarEntrada]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistroModel.php(27): CodeIgniter\Database\BaseConnection->query('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (?, ?, ?, ?)', [...])
+ 2 APPPATH\Controllers\Home.php(48): App\Models\RegistroModel->criarRegistro(1, 'Pq eu quis')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:30:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`access_control_system`.`registro_de_acesso`, CONSTRAINT `registro_de_acesso_ibfk_2` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionario` (`id_funcionario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')')
+ 3 APPPATH\Models\RegistroModel.php(27): CodeIgniter\Database\BaseConnection->query('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (?, ?, ?, ?)', [...])
+ 4 APPPATH\Controllers\Home.php(48): App\Models\RegistroModel->criarRegistro(1, 'Pq eu quis')
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-30 23:30:19 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`access_control_system`.`registro_de_acesso`, CONSTRAINT `registro_de_acesso_ibfk_2` FOREIGN KEY (`id_funcionario`) REFERENCES `funcionario` (`id_funcionario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (1, \'2026-04-30 23:30:19\', \'Pq eu quis\', \'ativo\')')
+ 4 APPPATH\Models\RegistroModel.php(27): CodeIgniter\Database\BaseConnection->query('INSERT INTO registro_de_acesso
+            (id_visitante, hora_entrada, motivo, status)
+            VALUES (?, ?, ?, ?)', [...])
+ 5 APPPATH\Controllers\Home.php(48): App\Models\RegistroModel->criarRegistro(1, 'Pq eu quis')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

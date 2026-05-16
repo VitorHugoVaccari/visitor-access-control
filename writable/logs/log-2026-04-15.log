@@ -1,0 +1,170 @@
+CRITICAL - 2026-04-15 23:17:21 --> ParseError: syntax error, unexpected end of file
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 142.
+ 1 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:18:39 --> ErrorException: Undefined variable $clientes
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:26:01 --> ErrorException: Undefined variable $clientes
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:28:02 --> ErrorException: Undefined variable $clientes
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $clientes', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:31:00 --> ErrorException: Undefined variable $visitantes
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitantes', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:33:21 --> ErrorException: Undefined variable $visitantes
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitantes', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:33:36 --> ErrorException: Undefined variable $visitantes
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitantes', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:33:46 --> ErrorException: Undefined variable $visitante
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitante', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(15): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:40:58 --> ErrorException: Undefined variable $visitante
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitante', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(17): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:42:18 --> ErrorException: Undefined variable $visitante
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitante', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(17): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 20:44:30 --> ErrorException: Undefined variable $visitante
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 125.
+ 1 APPPATH\Views\dashboard.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitante', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 125)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(17): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 23:46:42 --> Error: Class "App\Models\ClientesModel" not found
+[Method: POST, Route: dashboard]
+in APPPATH\Controllers\Home.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-15 23:48:33 --> Error: Class "App\Controllers\ClientesModel" not found
+[Method: POST, Route: dashboard]
+in APPPATH\Controllers\Home.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

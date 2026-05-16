@@ -1,0 +1,139 @@
+ERROR - 2026-04-16 00:32:19 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'access_control_system' in C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'access_control_...', 3306, '', 0)
+#1 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\cadastro_de_visitantes\app\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cp...')
+#4 C:\xampp\htdocs\cadastro_de_visitantes\app\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+#5 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+#6 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\cadastro_de_visitantes\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'access_control_system' in C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\cadastro_de_visitantes\app\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cp...')
+#3 C:\xampp\htdocs\cadastro_de_visitantes\app\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+#4 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+#5 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\cadastro_de_visitantes\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-04-16 00:32:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'access_control_system'
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-16 00:32:36 --> Table 'access_control_system.visitante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT nome, cpf, telefone, email FROM visitante', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome, cpf, telefone, email FROM visitante')
+ 4 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 5 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-16 00:32:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'access_control_system.visitante' doesn't exist
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 2 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-16 00:32:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'access_control_system.visitante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome, cpf, telefone, email FROM visitante')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 4 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-16 00:32:36 --> [Caused by] mysqli_sql_exception: Table 'access_control_system.visitante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT nome, cpf, telefone, email FROM visitante', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome, cpf, telefone, email FROM visitante')
+ 4 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 5 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-04-16 00:33:38 --> Table 'access_control_system.visitante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT nome, cpf, telefone, email FROM visitante', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome, cpf, telefone, email FROM visitante')
+ 4 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 5 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-16 00:33:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'access_control_system.visitante' doesn't exist
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 2 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-16 00:33:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'access_control_system.visitante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome, cpf, telefone, email FROM visitante')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 4 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-16 00:33:38 --> [Caused by] mysqli_sql_exception: Table 'access_control_system.visitante' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT nome, cpf, telefone, email FROM visitante', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT nome, cpf, telefone, email FROM visitante')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT nome, cpf, telefone, email FROM visitante')
+ 4 APPPATH\Models\RegistrosModel.php(16): CodeIgniter\Database\BaseConnection->query('SELECT nome, cpf, telefone, email FROM visitante')
+ 5 APPPATH\Controllers\Home.php(35): App\Models\RegistrosModel->buscarTodosVisitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

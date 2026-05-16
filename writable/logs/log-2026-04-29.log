@@ -1,0 +1,14 @@
+CRITICAL - 2026-04-29 19:38:27 --> ErrorException: Undefined variable $visitante
+[Method: POST, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 126.
+ 1 APPPATH\Views\dashboard.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $visitante', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php', 126)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(37): view('dashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

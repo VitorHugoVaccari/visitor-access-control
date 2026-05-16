@@ -1,0 +1,428 @@
+ERROR - 2026-05-05 14:18:54 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'access_control_...', 3306, '', 0)
+#1 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\cadastro_de_visitantes\app\Models\RegistroModel.php(79): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 C:\xampp\htdocs\cadastro_de_visitantes\app\Controllers\Home.php(116): App\Models\RegistroModel->buscarRegistrosAtivos()
+#5 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+#6 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\cadastro_de_visitantes\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\cadastro_de_visitantes\app\Models\RegistroModel.php(79): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#3 C:\xampp\htdocs\cadastro_de_visitantes\app\Controllers\Home.php(116): App\Models\RegistroModel->buscarRegistrosAtivos()
+#4 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+#5 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\cadastro_de_visitantes\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-05-05 14:18:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\RegistroModel.php(79): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.nome AS area,
+            r.hora_entrada,
+            r.status
+            FROM registro_de_acesso r
+            JOIN visitante v ON r.id_visitante = v.id_visitante
+            JOIN `areas-registro` ar ON r.id_registro = ar.id_registro
+            JOIN areas a ON ar.id_area = a.id_area
+            WHERE r.status = \'ativo\'')
+ 3 APPPATH\Controllers\Home.php(116): App\Models\RegistroModel->buscarRegistrosAtivos()
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-05 15:57:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'access_control_system' in C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'access_control_...', 3306, '', 0)
+#1 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\cadastro_de_visitantes\app\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#4 C:\xampp\htdocs\cadastro_de_visitantes\app\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+#5 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+#6 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\cadastro_de_visitantes\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'access_control_system' in C:\xampp\htdocs\cadastro_de_visitantes\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\cadastro_de_visitantes\system\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\cadastro_de_visitantes\app\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT \r\n      ...')
+#3 C:\xampp\htdocs\cadastro_de_visitantes\app\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+#4 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+#5 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\cadastro_de_visitantes\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\cadastro_de_visitantes\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\cadastro_de_visitantes\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2026-05-05 15:57:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'access_control_system'
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(654): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 3 APPPATH\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-05 15:58:24 --> Unknown column 'a.area' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 4 APPPATH\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 15:58:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.area' in 'field list'
+[Method: POST, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 2 APPPATH\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 15:58:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.area' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 3 APPPATH\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 4 APPPATH\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 15:58:24 --> [Caused by] mysqli_sql_exception: Unknown column 'a.area' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 4 APPPATH\Models\AcessoModel.php(84): CodeIgniter\Database\BaseConnection->query('SELECT 
+            v.nome,
+            v.email,
+            v.cpf,
+            a.area,
+            ac.hora_entrada,
+            ac.status
+            FROM acessos ac
+            JOIN visitantes v ON ac.id_visitante = v.id_visitante
+            WHERE ac.status = \'ativo\'')
+ 5 APPPATH\Controllers\Home.php(92): App\Models\AcessoModel->buscarAcessosAtivos()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-05 16:22:11 --> Cannot add or update a child row: a foreign key constraint fails (`controle_visitantes`.`acessos`, CONSTRAINT `acessos_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')')
+ 4 APPPATH\Models\AcessoModel.php(34): CodeIgniter\Database\BaseConnection->query('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (?, ?, ?, ?, ?)', [...])
+ 5 APPPATH\Controllers\Home.php(43): App\Models\AcessoModel->criarAcesso(1, 'Varias', 1)
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 16:22:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`controle_visitantes`.`acessos`, CONSTRAINT `acessos_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))
+[Method: POST, Route: home/registrarEntrada]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\AcessoModel.php(34): CodeIgniter\Database\BaseConnection->query('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (?, ?, ?, ?, ?)', [...])
+ 2 APPPATH\Controllers\Home.php(43): App\Models\AcessoModel->criarAcesso(1, 'Varias', 1)
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 16:22:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`controle_visitantes`.`acessos`, CONSTRAINT `acessos_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')')
+ 3 APPPATH\Models\AcessoModel.php(34): CodeIgniter\Database\BaseConnection->query('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (?, ?, ?, ?, ?)', [...])
+ 4 APPPATH\Controllers\Home.php(43): App\Models\AcessoModel->criarAcesso(1, 'Varias', 1)
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 16:22:11 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`controle_visitantes`.`acessos`, CONSTRAINT `acessos_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (1, 1, \'Varias\', \'2026-05-05 16:22:11\', \'ativo\')')
+ 4 APPPATH\Models\AcessoModel.php(34): CodeIgniter\Database\BaseConnection->query('INSERT INTO acessos
+            (id_visitante, id_usuario, area, hora_entrada, status)
+            VALUES (?, ?, ?, ?, ?)', [...])
+ 5 APPPATH\Controllers\Home.php(43): App\Models\AcessoModel->criarAcesso(1, 'Varias', 1)
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->registrarEntrada()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-05 16:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-05 13:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-05 13:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-05 13:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-05 13:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-05 20:08:47 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: visitantes]
+in APPPATH\Views\visitantes.php on line 93.
+ 1 APPPATH\Views\visitantes.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\visitantes.php', 93)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\visitantes.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('visitantes', [], true)
+ 5 APPPATH\Controllers\Home.php(75): view('visitantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->visitantes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 20:09:26 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: visitantes]
+in APPPATH\Views\visitantes.php on line 93.
+ 1 APPPATH\Views\visitantes.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\visitantes.php', 93)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Views\\visitantes.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('visitantes', [], true)
+ 5 APPPATH\Controllers\Home.php(75): view('visitantes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->visitantes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 21:18:03 --> ParseError: syntax error, unexpected variable "$nome"
+[Method: POST, Route: index]
+in APPPATH\Controllers\Home.php on line 101.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\cadastro_de_visitantes\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\Router\Router.php(792): class_exists('\\App\\Controllers\\Home')
+ 5 SYSTEMPATH\Router\Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(829): CodeIgniter\Router\Router->handle('index')
+ 7 SYSTEMPATH\CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-05 21:42:49 --> Unknown column 'id_visitantes' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 4 APPPATH\Models\VisitanteModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 5 APPPATH\Controllers\Home.php(74): App\Models\VisitanteModel->buscarTodosVisitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->visitantes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 21:42:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_visitantes' in 'field list'
+[Method: POST, Route: visitantes]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 APPPATH\Models\VisitanteModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 2 APPPATH\Controllers\Home.php(74): App\Models\VisitanteModel->buscarTodosVisitantes()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->visitantes()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 21:42:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_visitantes' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 3 APPPATH\Models\VisitanteModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 4 APPPATH\Controllers\Home.php(74): App\Models\VisitanteModel->buscarTodosVisitantes()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->visitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-05 21:42:49 --> [Caused by] mysqli_sql_exception: Unknown column 'id_visitantes' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 4 APPPATH\Models\VisitanteModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT id_visitantes, nome, cpf, telefone, email FROM visitantes')
+ 5 APPPATH\Controllers\Home.php(74): App\Models\VisitanteModel->buscarTodosVisitantes()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Home->visitantes()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(64): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
